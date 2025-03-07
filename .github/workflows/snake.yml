@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # Updated to latest version
 
       - name: Generate Snake Animation
         uses: Platane/snk@v3
@@ -18,17 +18,25 @@ jobs:
           github_user_name: ${{ github.repository_owner }}
           outputs: dist/snake.svg
 
+      - name: Check if Snake SVG exists
+        run: ls -l dist/
+
       - name: Upload the Snake Animation
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4  # Updated to v4
         with:
           name: snake
           path: dist/snake.svg
 
-      - name: Push Snake Animation to the repository
+      - name: Setup GitHub Credentials
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
+
+      - name: Push Snake Animation to the repository
+        run: |
+          git pull origin main --rebase  # Ensure the branch is up to date
           git add dist/snake.svg
           git commit -m "Generated snake animation"
           git push
+
 
