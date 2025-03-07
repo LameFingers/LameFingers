@@ -37,7 +37,8 @@
 
 <br clear="both">
 
-<img src="https://raw.githubusercontent.com/LameFingers/LameFingers/output/snake.svg" alt="Snake animation" />
+### 🐍 Snake Animation  
+![Snake animation](https://raw.githubusercontent.com/LameFingers/LameFingers/main/dist/snake.svg)
 
 ###
 
