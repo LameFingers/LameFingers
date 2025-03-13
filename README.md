@@ -50,7 +50,6 @@
 
   <img width="20"/>
   <img src="https://streak-stats.demolab.com?user=lamefingers&locale=en&mode=daily&theme=omni&hide_border=false&border_radius=5" height="140" alt="streak graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=lamefingers&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=omni&hide_border=false" height="140" alt="languages graph"  />
   </div>
 </div>
 
